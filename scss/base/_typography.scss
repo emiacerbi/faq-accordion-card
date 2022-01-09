@@ -1,0 +1,61 @@
+body {
+    font-family: var(--ff);
+    font-size: 12px;
+}
+
+.card {
+    &__main {
+
+        &__title {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        &__accordion {
+            
+            &__label {
+                color: var(--very-dark-grayish-blue);
+                font-size: .825rem;
+            }
+
+            &__label:hover,
+            &__label:focus {
+                color: var(--soft-red)
+            }
+
+            &__content {
+                color: var(--dark-grayish-blue);
+                font-size: .77rem;
+            }
+        }
+    }
+
+    // Active states
+
+    .active {
+        font-weight: 700;
+        color: #000;
+        padding-bottom: .5em;
+    }
+
+    .active:hover,
+    .active:focus {
+        color: var(--soft-red)
+    }
+}
+
+// Media queries
+
+@media (min-width : 1200px) {
+    .card {
+
+        &__main {
+            width: 50%;
+
+            &__title {
+                text-align: left !important;
+                font-size: 2.25rem;
+            }
+        }    
+    }
+}
